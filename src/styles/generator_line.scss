@@ -1,0 +1,85 @@
+.container {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 2fr 0.1fr 10fr 0.1fr 2fr 0.1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    'title . oneMinContainer . fiveMinContainer . tenMinContainer';
+
+    //border: solid red;
+}
+
+.header {
+    max-height: 12%;
+    text-align: center;
+    color: #faecd6;
+}
+
+@mixin vertical-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertical center alignment */
+    justify-content: space-around;
+}
+
+.titleContainer {
+    grid-area: title;
+
+    @include vertical-text;
+}
+
+.videoTitle {
+    color: #d6ecfa;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.oneMinContainer {
+    grid-area: oneMinContainer;
+    @include vertical-text;
+
+
+}
+
+.fiveMinContainer {
+    grid-area: fiveMinContainer;
+    @include vertical-text;
+}
+
+.tenMinContainer {
+    grid-area: tenMinContainer;
+    @include vertical-text;
+}
+
+@mixin minutesTextItem {
+    background: #fffaf3;
+    font-size: 1.2rem;
+    padding: 16px 16px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.oneMinItem {
+    @include minutesTextItem;
+
+    &:hover {
+        cursor: text;
+    }
+}
+
+.editableItem {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.fiveMinItem {
+    @include minutesTextItem;
+    background: #accffa;
+}
+
+.tenMinItem {
+    @include minutesTextItem;
+    background: #063771;
+    color: #fffaf3;;
+}

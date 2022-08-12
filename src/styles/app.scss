@@ -1,0 +1,46 @@
+.containerAll {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+
+    grid-template-columns: 0.1fr 3fr 0.1fr;
+    grid-template-rows: 0.1fr 7.5fr 0.2fr 8fr 0.2fr;
+    grid-template-areas:
+    '. . .'
+    '. videoContainer .'
+    '. . .'
+    '.  generatorContainer .'
+    'footer footer footer';
+
+    overflow: auto;
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+// Hide scrollbar for chrome
+.containerAll::-webkit-scrollbar {
+    display: none;
+}
+
+
+.videoSection {
+    grid-area: videoContainer;
+    width: 100%;
+    //border: blue solid;
+    box-sizing: border-box;
+}
+
+.generatorSection {
+    grid-area: generatorContainer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footerSection {
+    grid-area: footer;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-size: 0.8rem;
+    text-align: center;
+    color: rgba(152, 164, 175, 0.98);
+}

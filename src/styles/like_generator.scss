@@ -1,0 +1,30 @@
+.container {
+    height: 96%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.item {
+    flex-grow: 1;
+}
+
+.sendLikesButton {
+    display: inline-flex;
+    align-self: center;
+    background: #bbde98;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.waitEnabled {
+    background: #c2c2c2;
+}

@@ -1,0 +1,88 @@
+.container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    padding: 10px 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.infoText {
+    padding-left: 36px;
+    padding-right: 4px;
+
+    color: #faecd6;
+    font-size: 1.4rem;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.icon {
+    max-width: 25px;
+    max-height: 25px;
+    padding: 0 4px;
+
+    &:hover {
+        max-width: 26px;
+        max-height: 26px;
+        cursor: pointer;
+    }
+}
+
+.videoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.video {
+    padding: 1% 1%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(100px);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.videoImage {
+    max-width:100%;
+    height: auto;
+}
+
+.videoTitle {
+    padding-top: 20px;
+    font-weight: 600;
+}
+
+.lastMinLikes {
+    background: #98B4DE;
+    padding: 8px 4px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-right: 6px;
+}
+
+.like {
+    max-width: 20px;
+    max-height: 20px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+}
+
+.likesCounterContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
